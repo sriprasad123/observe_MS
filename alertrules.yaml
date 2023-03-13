@@ -1,0 +1,11 @@
+groups:
+- name: cpu_alerts
+  rules:
+  - alert: HighCPUUtilization
+    expr: avg by (pod_name) (irate(container_cpu_usage_seconds_total{container_name!="POD", container_name!=""}[1m])) * 100 > 60
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: High CPU utilization on {{ $labels.pod }}
+      description: The CPU utilization on pod {{ $labels.pod }} has been above 60% for the last 5 minutes.
