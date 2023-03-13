@@ -9,3 +9,15 @@ groups:
     annotations:
       summary: High CPU utilization on {{ $labels.pod }}
       description: The CPU utilization on pod {{ $labels.pod }} has been above 60% for the last 5 minutes.
+      
+      
+ALERT MemoryUtilization
+  IF sum(container_memory_working_set_bytes{namespace="NAMESPACE", pod!="", container!=""}) by (pod) / sum(kube_pod_container_resource_limits_memory_bytes{namespace="NAMESPACE", pod!="", container!=""}) by (pod) > 0.8
+  FOR 5m
+  LABELS { severity = "warning" }
+  ANNOTATIONS {
+    summary = "Memory utilization of pod {{ $labels.pod }} is {{ humanize $value }}",
+    description = "Memory utilization of pod {{ $labels.pod }} is at {{ humanize $value }} which is above 80%.",
+    slack_channel = "#alerts"
+  }
+
