@@ -1,0 +1,8 @@
+PromQL queries:
+
+To check the running pods: 
+kubelet_running_pod_count{namespace="default"}
+
+TO check the cpu utilization:
+sum by (pod_name) (irate(container_cpu_usage_seconds_total{container_name!="POD"}[5m])) * 100 > 80
+
