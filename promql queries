@@ -4,7 +4,7 @@ Overall pod status:
 count(kube_pod_info{namespace="namespace"})
 
 To check the running pods: 
-kubelet_running_pod_count{namespace="default"}
+#kubelet_running_pod_count{namespace="default"}
 sum by (namespace) (kube_pod_status_ready{condition="false"})
 
 
