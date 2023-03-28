@@ -13,3 +13,7 @@ sum by (pod_name) (irate(container_cpu_usage_seconds_total{container_name!="POD"
 
 to check the readiness probe
 sum(kube_pod_container_status_ready{pod="my-pod",container="my-container",condition="true"}) / count(kube_pod_container_status_ready{pod="my-pod",container="my-container"})
+
+
+
+kube_pod_container_status_restarts_total{namespace="<namespace>", pod="<pod-name>", container="<container-name>", restart_reason="LivenessProbe"}
