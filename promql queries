@@ -17,3 +17,5 @@ sum(kube_pod_container_status_ready{pod="my-pod",container="my-container",condit
 
 
 kube_pod_container_status_restarts_total{namespace="<namespace>", pod="<pod-name>", container="<container-name>", restart_reason="LivenessProbe"}
+
+strftime("%Y-%m-%d %H:%M:%S", datetime($__value.time, 'unixepoch', 'local'))
