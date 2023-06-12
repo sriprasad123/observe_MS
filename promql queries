@@ -28,3 +28,17 @@ def convert_timestamp(timestamp):
     datetime_object = datetime.datetime.fromtimestamp(timestamp)
     human_readable = datetime_object.strftime('%Y-%m-%d %H:%M:%S')
     return human_readable
+    
+    
+   
+prober_config:
+      http:
+        valid_http_versions: ["HTTP/1.1", "HTTP/2"]
+        headers:
+          User-Agent: "BlackboxExporter"
+        valid_http_versions: ["HTTP/1.1", "HTTP/2"]
+      script:
+        path: "/path/to/convert_timestamp.py"
+        args: [probe_ssl_earliest_cert_expiry]
+    targets:
+      - example.com
