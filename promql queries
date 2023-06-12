@@ -20,3 +20,11 @@ sum(kube_pod_container_status_ready{pod="my-pod",container="my-container",condit
 kube_pod_container_status_restarts_total{namespace="<namespace>", pod="<pod-name>", container="<container-name>", restart_reason="LivenessProbe"}
 
 strftime("%Y-%m-%d %H:%M:%S", datetime($__value.time, 'unixepoch', 'local'))
+
+
+import datetime
+
+def convert_timestamp(timestamp):
+    datetime_object = datetime.datetime.fromtimestamp(timestamp)
+    human_readable = datetime_object.strftime('%Y-%m-%d %H:%M:%S')
+    return human_readable
