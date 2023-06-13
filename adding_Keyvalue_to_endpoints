@@ -1,0 +1,14 @@
+modules:
+  http_kv_pairs:
+    prober: http
+    timeout: 5s
+    valid_http_versions: [ "HTTP/1.1", "HTTP/2" ]
+    valid_http_statuses: []  # Defaults to 2xx
+    body_match: "<key>: <value>"
+    
+    
+    
+targets:
+  - target: http://example.com/endpoint
+    labels:
+      name: "Example Endpoint"
