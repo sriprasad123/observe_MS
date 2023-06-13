@@ -1,0 +1,4 @@
+modules:
+  tcp_port_check:
+    prober: tcp_connect
+    timeout: 5s
