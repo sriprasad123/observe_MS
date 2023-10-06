@@ -21,3 +21,22 @@ Certainly, here's a list of your key contributions for your annual appraisal, hi
    - Acted as a subject matter expert, ensuring that observability best practices were applied consistently across various projects.
 
 These contributions highlight your technical proficiency, leadership, collaboration skills, and commitment to both technical excellence and corporate social responsibility. Your efforts have not only improved the technical landscape within the organization but have also had a positive impact on team members and the broader community through philanthropic initiatives.
+
+
+
+Adoption of New Technologies:
+
+Proactively expanded your knowledge base by acquiring expertise in cutting-edge observability tools such as Black-box Exporters, SNMP Exporters, Prometheus Agent, and Grafana configuration using PromQL queries. This expanded toolkit significantly enhanced our observability capabilities.
+Advanced Monitoring Solutions:
+
+Successfully implemented and fine-tuned Black-box Exporters and SNMP Exporters, providing us with comprehensive visibility into the health and performance of critical systems, applications, and network devices within the MKS cluster.
+Leveraged Prometheus Agent to enable more granular and efficient data collection, contributing to improved alerting and troubleshooting capabilities.
+Grafana Expertise:
+
+Demonstrated proficiency in Grafana configuration, utilizing PromQL queries to create customized and insightful dashboards. These dashboards have become instrumental in visualizing key performance metrics and aiding in data-driven decision-making.
+Log Management with Loki and Fluentbit:
+
+Successfully integrated Loki and Fluentbit into our observability stack, enhancing our log management capabilities. This integration has streamlined log collection, storage, and analysis, making it easier to pinpoint and address issues quickly.
+Migrating and Productionizing Products:
+
+Led the effort to migrate and productionize several critical products and services within the MKS production cluster. This achievement contributed to the organization's operational excellence and scalability, ensuring the seamless functioning of these products in a production environment.
