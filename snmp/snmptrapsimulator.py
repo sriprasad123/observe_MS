@@ -10,7 +10,6 @@ def send_snmpv3_trap():
     receiver_ip = '127.0.0.1'
     receiver_port = 162
 
-    snmp_engine = SnmpEngine()
     snmp_user = UsmUserData(user, auth_protocol, None, priv_protocol, None)
     snmp_target = UdpTransportTarget((receiver_ip, receiver_port))
 
@@ -21,11 +20,12 @@ def send_snmpv3_trap():
 
     errorIndication, errorStatus, errorIndex, varBindTable = next(
         sendNotification(
-            snmp_engine,
-            snmp_user,
-            None,
-            'trap',
-            var_binds=var_binds
+            snmpEngine=SnmpEngine(),
+            authData=snmp_user,
+            transportTarget=snmp_target,
+            contextData=None,
+            notifyType='trap',
+            varBinds=var_binds
         )
     )
 
