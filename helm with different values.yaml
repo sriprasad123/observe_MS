@@ -1,0 +1,60 @@
+Create the sub-template (snmp-configmap.yaml):
+
+yaml
+Copy code
+# my-chart/templates/snmp-configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-snmp-configmap
+data:
+  snmp.yaml: |-
+    {{ .Files.Get "templates/snmp/{{ .Values.snmpConfigFile }}" | nindent 8 }}
+In this example, the snmp.yaml file is included in the ConfigMap's data section with proper indentation.
+
+Modify the main template (configmap.yaml):
+
+yaml
+Copy code
+# my-chart/templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  key1: value1
+  key2: value2
+{{- if .Values.configMap.enabled }}
+  snmp.yaml: |-
+    {{ .Files.Get "templates/snmp-configmap.yaml" | nindent 8 }}
+{{- end }}
+Include the reference to the SNMP sub-template in the main ConfigMap.
+
+Create separate values files (values-deployment1.yaml, values-deployment2.yaml, etc.):
+
+Example for values-deployment1.yaml:
+
+yaml
+Copy code
+# my-chart/values/values-deployment1.yaml
+configMap:
+  enabled: true
+  snmpConfigFile: "deployment1-snmp.yaml"
+Example for values-deployment2.yaml:
+
+yaml
+Copy code
+# my-chart/values/values-deployment2.yaml
+configMap:
+  enabled: true
+  snmpConfigFile: "deployment2-snmp.yaml"
+Each values file specifies a different snmpConfigFile value, indicating which snmp.yaml file to use for that specific deployment.
+
+Install the Helm chart:
+
+Install the Helm chart with the desired values file:
+
+bash
+Copy code
+helm install my-release ./my-chart --values values/values-deployment1.yaml
+This approach allows you to keep the SNMP configuration in the snmp.yaml file and include it as data in the ConfigMap. The indentation is adjusted to maintain proper YAML formatting.
