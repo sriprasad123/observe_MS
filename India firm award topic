@@ -24,6 +24,6 @@ As a key member of the observability implementation team, I spearheaded the inte
 
 - **Benefits and Impact:** Through these contributions, our organization achieved improved observability, enhanced troubleshooting capabilities, and streamlined management of our monitoring infrastructure. These efforts resulted in increased operational efficiency, reduced downtime, and enhanced reliability across our entire ecosystem.
 
----
+the implementation of Fluent Bit on our Kubernetes cluster, focusing on collecting logs from Persistent Volume Claims (PVCs). I meticulously configured Fluent Bit to efficiently gather logs from various sources within the cluster. Additionally, I ensured seamless integration with ESM Managed Loki, enabling centralized log management and analysis. My responsibilities included optimizing Fluent Bit's performance to handle high volumes of log data while maintaining reliability and scalability.
 
 Feel free to adjust the content to better align with your specific experiences and achievements!
