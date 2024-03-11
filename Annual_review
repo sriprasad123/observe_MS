@@ -40,3 +40,23 @@ Successfully integrated Loki and Fluentbit into our observability stack, enhanci
 Migrating and Productionizing Products:
 
 Led the effort to migrate and productionize several critical products and services within the MKS production cluster. This achievement contributed to the organization's operational excellence and scalability, ensuring the seamless functioning of these products in a production environment.
+
+
+
+
+
+
+Slide 1:
+Exporters play a crucial role in collecting metrics and data from various sources. They collect and expose metrics in a format Prometheus can scrape
+Blackbox exporter: Probes endpoints over HTTP/HTTPS, DNS, TCP, and ICMP, providing insights into service health
+SNMP exporter: Monitors network devices and systems using SNMP, enabling monitoring of network performance and health
+Custom exporters: Includes KV check exporters (scraping endpoints as Key-Value pairs), SNMP traps, and Exts file check exporters for customized monitoring needs
+Prometheus: Prometheus is a monitoring system and time series database that collects metrics from monitored targets, allowing for real-time querying, visualization, and alerting based on those metrics.
+Prometheus is the core monitoring and alerting server that collects and stores metrics as time series data.
+Loki: Log aggregation system
+Grafana: Visualization and dashboard tool
+
+
+Slide 2: Implementation Details
+Prometheus agent: Prometheus agents are configured to scrape data from diverse sources using multiple exporters and  efficiently manage and forward metrics to Prometheus servers
+Remote write: Data collected by Prometheus agents and fluent-bit is securely transmitted through API to ESM-managed Prometheus for centralized storage and analysis.
