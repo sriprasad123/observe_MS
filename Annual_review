@@ -60,3 +60,8 @@ Grafana: Visualization and dashboard tool
 Slide 2: Implementation Details
 Prometheus agent: Prometheus agents are configured to scrape data from diverse sources using multiple exporters and  efficiently manage and forward metrics to Prometheus servers
 Remote write: Data collected by Prometheus agents and fluent-bit is securely transmitted through API to ESM-managed Prometheus for centralized storage and analysis.
+
+
+PagerDuty is an incident management platform that helps teams detect, triage, and resolve issues 
+Loki : A log aggregation system inspired by Prometheus. It enables efficient collection, querying, and exploration of logs
+Tempo: A open-source distributed tracing system, enables efficient storage, querying, and visualization of trace data to help understand the performance and behavior of distributed systems.
