@@ -65,3 +65,10 @@ Remote write: Data collected by Prometheus agents and fluent-bit is securely tra
 PagerDuty is an incident management platform that helps teams detect, triage, and resolve issues 
 Loki : A log aggregation system inspired by Prometheus. It enables efficient collection, querying, and exploration of logs
 Tempo: A open-source distributed tracing system, enables efficient storage, querying, and visualization of trace data to help understand the performance and behavior of distributed systems.
+
+
+
+Hi,
+Regarding the alternative for Loki Ruler is used for aalerting purpose based on Loki logs,
+By the time we started with ESM infra for setting up Loki ruler, it is not yet implemented.
+So we tried a workaround developing an utility where it finds the status value of a log and fluentbit configuration called "Prometheus" in fluentbit.conf to filter those logs into a timeseries metrics and send it to ESM prometheus via prom-agent.
