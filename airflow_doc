@@ -1,0 +1,21 @@
+Introduction
+This document provides an overview of Apache Airflow, its core components, and a step-by-step guide to deploying Airflow on a Kubernetes cluster using the Kubernetes executor.
+
+Understanding Apache Airflow
+Apache Airflow is an open-source platform for programming and managing workflows. It provides a programmatic way to author, schedule, and monitor workflows. Airflow is used to create, schedule, and monitor workflows.
+
+Core Components
+DAGs (Directed Acyclic Graphs): These represent the workflow as a series of tasks with dependencies.
+Tasks: Individual units of work within a DAG.
+Scheduler: Continuously monitors the DAGs and triggers tasks according to their schedule.
+Executor: Responsible for running the tasks.
+Webserver: Provides a UI for managing and monitoring workflows.
+
+Kubernetes Executor
+The Kubernetes executor is a powerful option for running Airflow tasks on Kubernetes. It creates a new pod for each task instance, providing isolation between the tasks and resource management.
+It also provides integration with Kubernetes ecosystem
+
+
+Deployment of Airflow on MKS cluster:
+
+
