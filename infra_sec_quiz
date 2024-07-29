@@ -1,0 +1,59 @@
+What is the main advantage of using Mutual TLS (mTLS) over TLS?
+
+a) Easier to implement
+b) Provides mutual authentication and trust
+c) Uses less computational resources
+d) Requires fewer certificates
+
+
+Ans: b) Provides mutual authentication and trust
+
+=========================================================================================================================
+Which protocol is typically used to implement Mutual TLS?
+
+a) HTTP
+b) FTP
+c) SSL/TLS
+d) SSH
+
+
+Ans: c) SSL/TLS
+=========================================================================================================================
+Which of the following is a key advantage of Kubernetes security over traditional VMs?
+
+A. Built-in antivirus protection
+B. Granular access controls through Role-Based Access Control (RBAC)
+C. Better hardware resource management
+D. Simpler network configurations
+
+
+
+Ans:B. Granular access controls through Role-Based Access Control (RBAC)
+=========================================================================================================================
+
+Which environment typically provides more granular access controls, Kubernetes or VMs?
+
+A. VMs
+B. Kubernetes
+C. Both provide the same level of access control
+D. Neither, access control is managed by external tools
+
+
+Ans: B. Kubernetes
+=========================================================================================================================
+
+
+
+
+
+
+
+=========================================================================================================================
+
+
+
+
+
+
+
+
