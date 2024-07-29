@@ -9,16 +9,6 @@ d) Requires fewer certificates
 Ans: b) Provides mutual authentication and trust
 
 =========================================================================================================================
-Which protocol is typically used to implement Mutual TLS?
-
-a) HTTP
-b) FTP
-c) SSL/TLS
-d) SSH
-
-
-Ans: c) SSL/TLS
-=========================================================================================================================
 Which of the following is a key advantage of Kubernetes security over traditional VMs?
 
 A. Built-in antivirus protection
@@ -42,13 +32,59 @@ D. Neither, access control is managed by external tools
 Ans: B. Kubernetes
 =========================================================================================================================
 
+Easy:
+
+What is the primary function of Kubernetes Secrets?
+
+A. To store sensitive information such as passwords and API keys securely
+B. To manage access control policies
+C. To encrypt data at rest
+D. To monitor network traffic
 
 
 
 
+Ans: A. To store sensitive information such as passwords and API keys securely
 
 
+Which environment is generally better suited for microservices architecture from a security perspective?
+
+A. VMs
+B. Kubernetes
+C. Both are equally suited
+D. Neither, microservices architecture is unrelated to security
+
+
+Which protocol is typically used to implement Mutual TLS?
+
+a) HTTP
+b) FTP
+c) SSL/TLS
+d) SSH
+
+
+Ans: c) SSL/TLS
 =========================================================================================================================
+
+Expert:
+
+A non-technical manager asks why the IT team is considering using Kubernetes over VMs for new applications. What is the most appropriate response?
+
+A. Kubernetes is cheaper than using VMs
+B. Kubernetes allows for more efficient resource utilization, scalability, and provides enhanced security features
+C. VMs are outdated and no longer used
+D. Kubernetes requires less maintenance than VMs
+
+Ans: B
+
+
+
+Your organization plans to implement a Zero Trust security model. Which environment, Kubernetes or VMs, is better suited to facilitate this model, and why?
+
+A. VMs, because they provide better isolation
+B. Kubernetes, due to its granular access controls ability to integrate with service meshes for mTLS
+C. Both environments are equally suited for Zero Trust
+D. Neither environment supports Zero Trust principles
 
 
 
